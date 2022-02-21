@@ -1,0 +1,18 @@
+{% extends '_layout.html' %}
+
+{% block body %}
+{% if numb | int !=0 %}
+<h3>tester</h3>
+    {% if numb | int %2 == 0 %}
+        <h2>{{ numb }} is even</h2>
+    {% endif %}
+    {% if numb | int %2 == 1 %}
+        <h2>{{ numb }} is odd</h2>
+    {% endif %}
+{% endif %}
+{% if numb | int == 0 %}
+    <h2>Please put in an integer and try again</h2>
+{% endif %}
+<a href="/">Go home</a>
+
+{% endblock %}

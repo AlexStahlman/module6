@@ -1,0 +1,10 @@
+{% extends '_layout.html' %}
+
+{% block body %}
+<h1>Input a number</h1>
+<form action="/submit" method="post">
+  <input type="text" name="numb" id="numb" autocomplete="off">
+  <input type="submit" value="Submit">
+</form>
+
+{% endblock %}
