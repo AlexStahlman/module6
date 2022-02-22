@@ -11,11 +11,17 @@
 <div class="container">
     <div class="row">
       <div class="col">
-        <ul>
+        <table class="table">
+        <tbody>
           {% for student, org in dict.items() %}
-            <li>{{ student, org}}  </li>
+          <tr>
+            <td>{{ student }} </td>
+            <td> {{ org }} </td>
+          </tr>
           {% endfor %}
-        </ul>
+        </tbody>
+      </table>
+        
       </div>
     </div>
 

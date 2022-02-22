@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 dict = {}
 student = []
-org = []
+org = ()
 
 @app.get('/')
 def index():
@@ -13,6 +13,6 @@ def index():
 @app.post('/submit')
 def submit():
     student = request.form.get('student', 'Nothing')
-    org = request.args.get('org')
+    org = request.form.get('org')
     dict[student] = org
-    return render_template('submit.html', student=student, dict=dict)
+    return render_template('submit.html', dict=dict)
